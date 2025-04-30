@@ -1,6 +1,6 @@
 | Format | Status     | Tested     |
 | :-------- | :------- | :------- |
-| %c (Single Character) | <p align="center">❌</p> | <p align="center">❌</p> |
+| %c (Single Character) | <p align="center">✅</p> | <p align="center">❌</p> |
 | %s (String) | <p align="center">❌</p> | <p align="center">❌</p> |
 | %p (void * argument in Hexadecimal format) | <p align="center">❌</p> | <p align="center">❌</p> |
 | %d (Decimal Base 10 Number) | <p align="center">❌</p> | <p align="center">❌</p> |
