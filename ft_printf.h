@@ -6,7 +6,7 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 11:09:24 by miduarte          #+#    #+#             */
-/*   Updated: 2025/04/30 10:30:02 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/05/01 12:46:36 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,18 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdint.h>
 
 int ft_printf(const char *, ...);
+int	ft_putchar (int	chr);
+int	ft_putstring(char *s);
+int ft_putnbr_base(long	nb, int base);
+int ft_putnbr_unsigned(uintptr_t	nb, int base);
+int ft_putnbr_baseUpper(long	nb, int base);
+int	ft_putpointer (void *ptr);
+
+
+
+
 
 #endif
