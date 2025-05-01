@@ -6,7 +6,7 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 11:09:05 by miduarte          #+#    #+#             */
-/*   Updated: 2025/05/01 15:31:05 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/05/01 16:00:06 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,10 +67,10 @@ int main(void)
     int ft_count;
     int std_count;
 
-    ft_count = ft_printf("Testing %s: %d %x %p\n", "ft_printf", 42, 42, &ft_count);
+    ft_count = ft_printf("Testing %s: %d %x %p\n", "printf", 42, 42, &std_count);
     std_count = printf("Testing %s: %d %x %p\n", "printf", 42, 42, &std_count);
     
-    ft_printf("ft_printf count: %d\n", ft_count);
+    ft_printf("printf count: %d\n", ft_count);
     printf("printf count: %d\n", std_count);
     
     return 0;
