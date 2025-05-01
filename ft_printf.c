@@ -6,18 +6,11 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 11:09:05 by miduarte          #+#    #+#             */
-/*   Updated: 2025/05/01 12:50:43 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/05/01 15:31:05 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-/* if (arg == %)
-	if (arg + 1 == s)
-		ft_putstr
-	else if (arg + 1 == d)
-		ft_putnbr
- */
 
 int	print_format (char format, va_list ap)
 {
@@ -41,7 +34,7 @@ int	print_format (char format, va_list ap)
 	else if (format == 'p')
 		count += ft_putpointer(va_arg(ap, void*));
 	else if (format == 'u')
-		count += ft_putnbr_unsigned(va_arg(ap, int), 10);
+		count += ft_putnbr_unsigned(va_arg(ap, unsigned int), 10);
 	return (count);
 }
  
@@ -58,17 +51,27 @@ int	print_format (char format, va_list ap)
 	 {
 		 if (string[i] == '%')
 		 {
-			 print_format(string[i + 1], ap);
-			 i++;
+			count += print_format(string[i + 1], ap);
+			i++;
 		 }
+		 else
+			count += ft_putchar(string[i]);
+		 i++;
 	 }
- }
- 
- 
- int main()
- {
-	 int count;
- 
-	 count = ft_printf("Hello %s\n", "john");
-	 ft_printf("The chars written are %d\n", count);
- }
+	 va_end(ap);
+	 return (count); 
+}
+
+int main(void)
+{
+    int ft_count;
+    int std_count;
+
+    ft_count = ft_printf("Testing %s: %d %x %p\n", "ft_printf", 42, 42, &ft_count);
+    std_count = printf("Testing %s: %d %x %p\n", "printf", 42, 42, &std_count);
+    
+    ft_printf("ft_printf count: %d\n", ft_count);
+    printf("printf count: %d\n", std_count);
+    
+    return 0;
+}

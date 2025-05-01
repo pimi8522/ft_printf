@@ -6,7 +6,7 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 11:09:24 by miduarte          #+#    #+#             */
-/*   Updated: 2025/05/01 12:46:36 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/05/01 13:08:25 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,5 @@ int ft_putnbr_base(long	nb, int base);
 int ft_putnbr_unsigned(uintptr_t	nb, int base);
 int ft_putnbr_baseUpper(long	nb, int base);
 int	ft_putpointer (void *ptr);
-
-
-
-
 
 #endif

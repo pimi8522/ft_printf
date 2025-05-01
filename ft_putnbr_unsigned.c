@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstring.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr_unsigned.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/30 11:50:32 by miduarte          #+#    #+#             */
-/*   Updated: 2025/05/01 13:05:57 by miduarte         ###   ########.fr       */
+/*   Created: 2025/05/01 12:37:56 by miduarte          #+#    #+#             */
+/*   Updated: 2025/05/01 15:17:32 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putstring(char *s)
+int ft_putnbr_unsigned(uintptr_t	nb, int base)
 {
-	int	i;
-	int	count;
+	int count;
+	char *symbols;
 
-	i = 0;
 	count = 0;
-	while (s[i] != '\0')
+	symbols = "0123456789abcdef";
+	if ((long)nb < base)
+		return (ft_putchar(symbols[nb]));
+	else
 	{
-		ft_putchar(s[i]);
-		i++;
-		count++;
+		count = ft_putnbr_unsigned(nb / base, base);
+		return (count + ft_putnbr_unsigned(nb % base, base));
 	}
 	return (count);
 }

@@ -6,11 +6,11 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 10:41:46 by miduarte          #+#    #+#             */
-/*   Updated: 2025/04/30 13:07:38 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/05/01 13:05:05 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "ft_printf.h"
 
 int	ft_putchar (int	chr)
 {
