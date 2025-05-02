@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr_baseUpperx.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/30 12:03:52 by miduarte          #+#    #+#             */
-/*   Updated: 2025/05/02 14:41:47 by miduarte         ###   ########.fr       */
+/*   Created: 2025/04/30 15:00:15 by miduarte          #+#    #+#             */
+/*   Updated: 2025/05/02 14:44:01 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_putnbr_base(int n, int base)
+int ft_putnbr_baseUpperx(unsigned int n, int base)
 {
     int     count;
-    long    nb;
-    char    *symbols;
+    char    *symbols = "0123456789ABCDEF";
 
-    nb = n;
     count = 0;
-    symbols = "0123456789abcdef";
-	if (base < 2 || base > 16)
-    	return (0);
-    if (nb < 0)
-    {
-        count += ft_putchar('-');
-        nb = -nb;
-    }
-    if (nb >= base)
-        count += ft_putnbr_base(nb / base, base);
-    count += ft_putchar(symbols[nb % base]);
+    if (base < 2 || base > 16)
+        return (0);
+    if (n >= (unsigned int)base)
+        count += ft_putnbr_base(n / base, base);
+    count += ft_putchar(symbols[n % base]);
     return (count);
 }
