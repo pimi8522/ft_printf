@@ -6,7 +6,7 @@
 #    By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/24 11:09:28 by miduarte          #+#    #+#              #
-#    Updated: 2025/05/02 14:44:57 by miduarte         ###   ########.fr        #
+#    Updated: 2025/05/02 15:01:45 by miduarte         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC := cc
 
 CFLAGS := -Wall -Werror -Wextra
 
-SRC := ft_printf.c ft_putchar.c ft_putstring.c ft_putnbr_base.c ft_putnbr_baseUpperx.c \
+SRC := ft_printf.c ft_putchar.c ft_putstring.c ft_putnbr_base.c \
 		ft_putnbr_unsigned.c ft_putpointer.c ft_putnbr_basex.c
 
 OBJ := $(SRC:.c=.o)

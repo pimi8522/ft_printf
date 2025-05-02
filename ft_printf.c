@@ -6,7 +6,7 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 11:09:05 by miduarte          #+#    #+#             */
-/*   Updated: 2025/05/02 14:45:57 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/05/02 15:04:54 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ int	print_format (char format, va_list ap)
 	else if (format == 'i')
 		count += ft_putnbr_base(va_arg(ap, int), 10);
 	else if (format == 'x')
-		count += ft_putnbr_basex(va_arg(ap, unsigned int), 16);
+		count += ft_putnbr_basex(va_arg(ap, unsigned int), 16, 0);
 	else if (format == 'X')
-		count += ft_putnbr_baseUpperx(va_arg(ap, unsigned int), 16);
+		count += ft_putnbr_basex(va_arg(ap, unsigned int), 16, 1);
 	else if (format == '%')
 		count += ft_putchar('%');
 	else if (format == 'p')

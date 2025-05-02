@@ -6,22 +6,26 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 14:42:47 by miduarte          #+#    #+#             */
-/*   Updated: 2025/05/02 14:43:00 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/05/02 15:11:55 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_putnbr_basex(unsigned int n, int base)
+int ft_putnbr_basex(unsigned int n, int base, int caps)
 {
     int     count;
-    char    *symbols = "0123456789abcdef";
+    const char    *symbols = "0123456789abcdef";
+    const char    *symbolsupper = "0123456789ABCDEF";
 
     count = 0;
     if (base < 2 || base > 16)
         return (0);
     if (n >= (unsigned int)base)
-        count += ft_putnbr_base(n / base, base);
-    count += ft_putchar(symbols[n % base]);
+        count += ft_putnbr_basex(n / base, base, caps);
+    if (caps == 0)
+        count += ft_putchar(symbols[n % base]);
+    else
+        count += ft_putchar(symbolsupper[n % base]);
     return (count);
 }
