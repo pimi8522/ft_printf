@@ -6,7 +6,7 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 11:09:05 by miduarte          #+#    #+#             */
-/*   Updated: 2025/05/01 16:00:06 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/05/02 14:37:28 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,18 @@ int	print_format (char format, va_list ap)
 		count += ft_putnbr_unsigned(va_arg(ap, unsigned int), 10);
 	return (count);
 }
- 
+
  int	ft_printf (const char *string, ...)
  {
 	 va_list ap;
 	 int count;
 	 int	i;
- 
+
 	 va_start(ap, string);
 	 i = 0;
 	 count = 0;
+	 if (!string || (string[0] == '%' && string[1] == '\0'))
+	 	return (-1);
 	 while (string[i] != '\0')
 	 {
 		 if (string[i] == '%')
@@ -60,18 +62,4 @@ int	print_format (char format, va_list ap)
 	 }
 	 va_end(ap);
 	 return (count); 
-}
-
-int main(void)
-{
-    int ft_count;
-    int std_count;
-
-    ft_count = ft_printf("Testing %s: %d %x %p\n", "printf", 42, 42, &std_count);
-    std_count = printf("Testing %s: %d %x %p\n", "printf", 42, 42, &std_count);
-    
-    ft_printf("printf count: %d\n", ft_count);
-    printf("printf count: %d\n", std_count);
-    
-    return 0;
 }
