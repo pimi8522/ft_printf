@@ -6,16 +6,16 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 12:37:56 by miduarte          #+#    #+#             */
-/*   Updated: 2025/05/01 15:17:32 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/05/05 12:01:38 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_putnbr_unsigned(uintptr_t	nb, int base)
+int	ft_putnbr_unsigned(uintptr_t nb, int base)
 {
-	int count;
-	char *symbols;
+	int		count;
+	char	*symbols;
 
 	count = 0;
 	symbols = "0123456789abcdef";

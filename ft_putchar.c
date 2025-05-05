@@ -6,13 +6,13 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 10:41:46 by miduarte          #+#    #+#             */
-/*   Updated: 2025/05/01 13:05:05 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/05/05 11:57:51 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar (int	chr)
+int	ft_putchar(int chr)
 {
 	return (write (1, &chr, 1));
 }
