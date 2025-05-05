@@ -6,7 +6,7 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 10:52:39 by miduarte          #+#    #+#             */
-/*   Updated: 2025/05/05 12:11:32 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/05/05 12:17:16 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_putpointer(void *ptr)
 	return (count);
 }
 
-int	ft_putaddr(uintptr_t addr, int base)
+static int	ft_putaddr(uintptr_t addr, int base)
 {
 	int			count;
 	const char	*symbols;

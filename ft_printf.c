@@ -6,13 +6,13 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 11:09:05 by miduarte          #+#    #+#             */
-/*   Updated: 2025/05/05 11:38:34 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/05/05 12:18:23 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	print_format(char format, va_list ap)
+static int	print_format(char format, va_list ap)
 {
 	int	count;
 
