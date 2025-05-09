@@ -1,3 +1,6 @@
+what it says on the tin. A fully working printf implentation, although lacking some features like the floating point and stuff
+
+
 | Format | Status     | Tested     |
 | :-------- | :------- | :------- |
 | %c (Single Character) | <p align="center">✅</p> | <p align="center">✅</p> |
